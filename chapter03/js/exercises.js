@@ -13,6 +13,11 @@ Exer.defining = function () {  // do not remove or alter
 // Use a function expression to define a function named `three`.
 // That function should return the value 3.
 
+var three = function(x) {
+  return 2 + 1;
+};
+
+
 
 
 /******************************    DEFINING 2    ******************************/
@@ -20,13 +25,21 @@ Exer.defining = function () {  // do not remove or alter
 // `myLog` should accept one parameter named `message`.
 // `myLog` should output `message` to the console with the appropriate
 //     formatting.
-
+var myLog = function(message){
+console.log("The Log Says: " + message);
+}
 
 
 /******************************    DEFINING 3    ******************************/
 // Use a function expression to define a function named `square`.
 // `square` should accept one parameter named `number`.
 // The function should square the number and both log and return the result.
+var square = function(number){
+var result = number * number;
+console.log(result);
+return result;
+}
+
 
 
 
@@ -49,8 +62,15 @@ Exer.defining = function () {  // do not remove or alter
 
 Exer.parameters1 = function() {
 
-
-
+var spaceCubeDetector = function (length, width, height){
+  if(length === width && width === height && height === length){
+    return "SPACE CUBE DETECTED!!";
+  }
+    else{
+        return "THIS IS NO SPACE CUBE!";
+     }
+};
+return spaceCubeDetector;
  };  // end Exer.parameters1
 
 /*****************************    Parameters 2    *****************************/
@@ -65,7 +85,10 @@ Exer.parameters1 = function() {
 Exer.parameters2 = function(spaceCubeDetector) {  //
 //================================================//
 
-
+   console.log(spaceCubeDetector(3, 5, 3.14159265359));
+   console.log(spaceCubeDetector(7, 7, 7));
+   console.log(spaceCubeDetector(1, 2, 3));
+ 
 
 };  // wrapper end
 
@@ -84,6 +107,8 @@ Exer.scopeExample = function() {
   var skip = function() {
     var foo = 5;
     console.log(foo); // Scope 1: What value of foo is logged?
+
+
     quux = foo *  bar;
     console.log(quux); // Scope 2: What value of quux is logged?
     return bar;
@@ -107,23 +132,23 @@ Exer.scopeExample = function() {
 //  Write your answers in this section
 
 Exer.scope1 = function() {
-  return /* return value for Scope 1 */ ;
+  return 5 ;
 };
 
 Exer.scope2 = function() {
-  return /* return value for Scope 2 */ ;
+  return 35 ;
 };
 
 Exer.scope3 = function() {
-  return /* return value for Scope 3 */ ;
+  return 7 ;
 };
 
 Exer.scope4 = function() {
-  return /* return value for Scope 4 */ ;
+  return 7/* return value for Scope 4 */ ;
 };
 
 Exer.scope5 = function() {
-  return /* return value for Scope 5 */ ;
+  return  35 /* return value for Scope 5 */ ;
 };
 
 /*******************************************************************************
@@ -212,10 +237,10 @@ Exer.nest3 = function() {
   return /* answer for Nest 3 */ ;
 };
 Exer.nest4 = function() {
-  return /* answer for Nest 4 */ ;
+  return 0;
 };
 Exer.nest5 = function() {
-  return /* answer for Nest 5 */ ;
+  return 11;
 };
 Exer.nest6 = function() {
   return /* answer for Nest 6 */ ;
@@ -224,7 +249,7 @@ Exer.nest7 = function() {
   return /* answer for Nest 7 */ ;
 };
 Exer.nest8 = function() {
-  return /* answer for Nest 8 */ ;
+  return 17;
 };
 Exer.nest9 = function() {
   return /* answer for Nest 9 */ ;
